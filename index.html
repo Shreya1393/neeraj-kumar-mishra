@@ -179,7 +179,7 @@ document.getElementById('dcr').onclick=function(){S.hidden=A.hidden=false;X.hidd
 </div></section>
 
 <div class="stats"><div class="w">
-<div><b data-n="5" data-d="1">0</b>Google rating</div><div><b data-n="42">0</b>Google reviews</div><div><b data-n="24">0</b>Hours open</div><div><b data-n="12">0</b>Areas of law</div></div></div>
+<div><b data-n="5" data-d="1" id="str">0</b>Client rating</div><div><b data-n="42" id="stn">0</b>Client reviews</div><div><b data-n="24">0</b>Hours open</div><div><b data-n="12">0</b>Areas of law</div></div></div>
 
 <section id="practice"><div class="w c"><div class="k">Practice area</div><h2>What We Cover</h2><p class="mu" style="margin-top:8px">Focused representation and practical guidance for individuals and families.</p>
 <div class="g4">
@@ -228,7 +228,7 @@ document.getElementById('dcr').onclick=function(){S.hidden=A.hidden=false;X.hidd
 <div class="st up"><i>06</i><div><h3>Papers in order</h3><p>Copies of orders and filings are kept organised and shared with you.</p></div></div></div>
 </div></section>
 
-<section class="tst" id="reviews"><div class="w c"><div class="k">Testimonial</div><h2>Happy Clients</h2><p style="color:var(--gold);letter-spacing:4px;margin-top:6px">★★★★★ <span style="color:#ccc;letter-spacing:0;font-size:14px">5.0 · 42 Google reviews</span></p>
+<section class="tst" id="reviews"><div class="w c"><div class="k">Testimonial</div><h2>Happy Clients</h2><p style="color:var(--gold);letter-spacing:4px;margin-top:6px">★★★★★ <span id="fbt" style="color:#ccc;letter-spacing:0;font-size:14px">5.0 · 42 Google reviews</span></p>
 <div class="sl"><div class="tr" id="tr" style="text-align:left">
 <div class="sld"><div class="q">He is a skilled advocate with excellent communication and analytical abilities. He presents arguments confidently and handles complex matters efficiently.</div><div class="who"><div class="av">K</div><div><b>Kartikey Dixit</b><small>Google review</small></div></div></div>
 <div class="sld"><div class="q">Highly professional and trustworthy. He approached the recovery matter with great expertise and dedication.</div><div class="who"><div class="av">A</div><div><b>Adarsh Pandey</b><small>Google review</small></div></div></div>
@@ -297,6 +297,10 @@ if(firebaseConfig.projectId){try{
  const snap=await F.getDocs(F.query(F.collection(db,'reviews'),F.where('approved','==',true),F.limit(50)));
  const items=snap.docs.map(d=>d.data()).filter(r=>r.rating>=1&&r.rating<=5&&r.name&&r.message);
  items.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));render(items);
+ if(items.length){const G=42,GR=5,N=items.length,sum=items.reduce((t,r)=>t+r.rating,0),total=G+N,avg=((GR*G+sum)/total).toFixed(1);
+  $('fbt').textContent=avg+' · '+total+' reviews ('+G+' Google + '+N+' on website)';
+  const set=(id,v,txt)=>{const e=$(id);if(!e)return;e.dataset.n=v;setTimeout(()=>{e.textContent=txt},1600)};
+  set('stn',total,String(total));set('str',avg,avg)}
 }catch(e){console.error(e);render([])}}else render([]);
 form.onsubmit=async e=>{e.preventDefault();if($('fh').value)return;
  const name=$('fn').value.trim(),text=$('fm').value.trim();
