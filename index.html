@@ -86,7 +86,65 @@ footer h4{color:#fff;font-size:22px;margin:0 0 14px;font-family:'Cormorant Garam
 #team .st{background:var(--lt2);border:1px solid #b89e6c40;border-top:3px solid #b89e6c66;align-items:flex-start;padding:30px 26px}#team .st:hover{border-top-color:var(--gold)}.st i{min-width:50px}
 .mb{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:11px;background:none;border:0;cursor:pointer}.mb span{display:block;height:2px;background:var(--gold);border-radius:2px;transition:.3s}.mb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.mb.open span:nth-child(2){opacity:0}.mb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.mb:focus-visible{outline:2px solid var(--gold)}
 @media(max-width:900px){.mb{display:flex}nav ul.open{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--nav);padding:6px 22px 14px;box-shadow:0 14px 24px #0004;max-height:calc(100vh - 68px);overflow:auto}nav ul.open li a{display:block;padding:14px 0;border-bottom:1px solid #b89e6c33;font-size:16px}nav ul.open li:last-child a{border-bottom:0}}
+
+[hidden]{display:none!important}
+.fbb,.fbo{border-radius:40px;padding:13px 26px;font:600 14.5px 'Source Sans 3',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.fbb{background:var(--gold);color:#14151a;border:1.5px solid var(--gold)}.fbo{background:none;color:#fff;border:1.5px solid #ffffffb0}.fbb:hover{filter:brightness(1.08)}.fbo:hover{background:#ffffff14}.fbb:disabled{opacity:.6;cursor:wait}
+.fb{margin-top:72px;text-align:left}.fb h3{font:600 clamp(28px,3.6vw,38px)/1.2 'Cormorant Garamond',serif;text-align:center;color:#fff}.fb>p{text-align:center;color:#b9b9c0;margin:8px 0 34px}
+.fbg{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:start}@media(max-width:860px){.fbg{grid-template-columns:1fr}}
+.fbl{display:grid;gap:14px;max-height:540px;overflow:auto;padding-right:6px}
+.fbc{background:#ffffff0d;border:1px solid #b89e6c40;border-radius:10px;padding:18px 20px}.fbc .s5{color:var(--gold);letter-spacing:3px;font-size:14px}.fbc p{margin:8px 0 12px;color:#e3e3e8;font-size:15px;line-height:1.65;word-break:break-word}.fbc small{color:#a3a4ac}.fbc b{color:#fff}
+.fbe{color:#a3a4ac;padding:28px;text-align:center;border:1px dashed #b89e6c55;border-radius:10px}
+.fbf{background:#ffffff0d;border:1px solid #b89e6c40;border-radius:12px;padding:24px;display:grid;gap:16px;position:relative}
+.fbf label{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block}
+.fbf input[type=text],.fbf textarea{width:100%;margin-top:7px;background:#0f1013;border:1px solid #ffffff2a;border-radius:8px;color:#fff;padding:12px 14px;font:inherit;resize:vertical}
+.fbf input:focus,.fbf textarea:focus,.stars button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.stars{display:flex;gap:2px;margin-top:4px}.stars button{background:none;border:0;font-size:32px;line-height:1;color:#555;cursor:pointer;padding:2px 4px}.stars button.on{color:var(--gold)}
+.fbf .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}.fbm{font-size:14px;min-height:20px}.fbm.ok{color:#7ddc9a}.fbm.er{color:#ff9a9a}.fbn{font-size:12.5px;color:#a3a4ac}
+
+.sp{position:fixed;inset:0;z-index:10001;background:#12131a;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .7s}.sp.out{opacity:0;pointer-events:none}
+.pt{position:absolute;border-radius:50%;background:#b89e6c;opacity:.38;animation:fl var(--d,8s) ease-in-out infinite alternate}@keyframes fl{to{transform:translate(var(--x,20px),var(--y,-40px));opacity:.1}}
+.spc{position:relative;text-align:center;color:#fff;animation:rise 1.2s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.spl{width:96px;aspect-ratio:1;stroke:var(--gold);fill:none;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
+.spn{font:600 clamp(13px,3.8vw,17px) 'Source Sans 3',sans-serif;letter-spacing:.45em;margin:20px 0 8px;padding-left:.45em}.sps{font-size:10px;letter-spacing:.5em;color:#b9b9c0;padding-left:.5em}
+.spt{position:absolute;bottom:13%;left:0;right:0;text-align:center;color:var(--gold);font:400 clamp(15px,4.2vw,24px) 'Source Sans 3',sans-serif;letter-spacing:.36em;line-height:1.9;padding:0 24px;animation:rise 1.6s .3s ease both}
+.dc{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:14px;background:rgba(10,11,15,.88);backdrop-filter:blur(6px)}
+.dcb{width:100%;max-width:640px;max-height:92vh;max-height:92dvh;display:flex;flex-direction:column;background:#faf9f6;border-radius:14px;overflow:hidden;box-shadow:0 24px 70px #000a}
+.dch{display:flex;gap:16px;align-items:center;background:#1d2029;padding:22px 24px;border-bottom:2px solid var(--gold)}.dch svg{flex:none;width:36px;height:36px}.dch h2{font:600 clamp(26px,6vw,34px)/1.1 'Cormorant Garamond',serif;color:#fff;margin:0}.dch p{margin:5px 0 0;color:#c4c6d0;font-size:14px}
+.dcs{flex:1;overflow:auto;padding:20px 22px 8px;color:#3a3b42;font-size:15px;line-height:1.7}.dcs>p{margin:0 0 16px}
+.dcn2{display:flex;gap:12px;background:#fff9e6;border:1px solid #f0dc8c;color:#7a3e0a;border-radius:10px;padding:14px 16px;margin-bottom:18px;font-size:14.5px;line-height:1.6}.dcn2 svg{flex:none;width:22px;height:22px;margin-top:2px}.dcn2 b{display:block}
+.dcc{background:#fff;border:1px solid #e6e3da;border-radius:10px;padding:16px 18px;margin-bottom:14px}.dcc h3{display:flex;gap:10px;align-items:center;font:600 18px/1.3 'Source Sans 3',sans-serif;color:#1d2029;margin:0 0 6px}.dcc h3 svg{flex:none;width:20px;height:20px}.dcc p{margin:0;font-size:14.5px}
+.dcf{background:#f4f6fa;border:1px solid #d8dde8;border-radius:10px;padding:14px 16px;font-size:14.5px;margin-bottom:12px}
+.dca{display:flex;flex-direction:column;gap:12px;padding:16px 22px 18px;background:#fff;border-top:1px solid #e6e3da}@media(min-width:560px){.dca{flex-direction:row}.dca button{flex:1}}
+.dca button,.dcx button{text-transform:none;letter-spacing:.02em;font-size:16px;padding:15px 20px;border-radius:10px;width:100%}.dca .fbo{color:#2b2d35;border-color:#cfd2da;background:#fff}.dca .fbo:hover{background:#f3f3f3}
+.dcx{padding:26px 24px 28px;color:#3a3b42}.dcx h3{font:600 28px 'Cormorant Garamond',serif;color:#1d2029;margin:0 0 8px}.dcx p{margin:0 0 20px;line-height:1.7}
+@media(prefers-reduced-motion:reduce){.pt,.spc,.spt{animation:none}}
 </style></head><body>
+<div class="sp" id="sp" aria-hidden="true"><div class="spc"><svg class="spl" viewBox="0 0 48 48"><use href="#i-scale"/></svg><div class="spn">NEERAJ KUMAR MISHRA</div><div class="sps">ADVOCATE &amp; ASSOCIATES</div></div><div class="spt">EXCELLENCE IN LEGAL SERVICES</div></div>
+<div class="dc" id="dc" role="dialog" aria-modal="true" aria-labelledby="dct" hidden><div class="dcb">
+<div class="dch"><svg viewBox="0 0 24 24" fill="none" stroke="#b89e6c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/></svg><div><h2 id="dct">Important Legal Disclaimer</h2><p>Bar Council of India Compliance Notice</p></div></div>
+<div class="dcs" tabindex="0">
+<div class="dcn2"><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><b>Informational Purpose Only</b><span>This website contains general information and is not intended as legal advice, solicitation, or advertisement under the Bar Council of India Rules.</span></div></div>
+<p><b>Welcome to Neeraj Kumar Mishra &amp; Associates.</b> This website is maintained for informational purposes only and does not constitute an advertisement or solicitation under the Bar Council of India Rules.</p>
+<div class="dcc"><h3><svg viewBox="0 0 24 24" fill="none" stroke="#b89e6c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>No Legal Advice or Attorney-Client Relationship</h3><p>The content on this website is for general information only and should not be construed as legal advice. Accessing or using this website does not create an attorney-client relationship. Please seek appropriate legal counsel before acting on any information found here.</p></div>
+<div class="dcc"><h3>No Solicitation or Advertisement</h3><p>This website is not intended to solicit clients or advertise legal services. Information is provided at your own request and volition, and no communication, invitation or inducement has been made by us or any of our members to solicit work through this website.</p></div>
+<div class="dcc"><h3>No Liability</h3><p>Neeraj Kumar Mishra &amp; Associates, its associates and affiliates shall not be held liable for any errors, omissions, or reliance on information provided on this website. Legal requirements vary, and the content may not apply to your specific situation.</p></div>
+<div class="dcc"><h3><svg viewBox="0 0 24 24" fill="none" stroke="#b89e6c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c0 3 2 4 4 4 0 2 2 4 5 5z"/><path d="M9 10h.01M8 15h.01M14 15h.01"/></svg>Cookies and Data Storage</h3><p>This website uses browser storage to remember your acceptance of this disclaimer and to limit repeated feedback submissions. By proceeding, you consent to the use of such technologies.</p></div>
+<div class="dcf"><b>By clicking "I Agree &amp; Proceed,"</b> you acknowledge that you have read, understood, and accept the terms of this disclaimer. If you do not agree, please click "I Do Not Agree" to exit.</div>
+</div>
+<div class="dca"><button class="fbo" id="dcn" type="button">I Do Not Agree</button><button class="fbb" id="dcy" type="button">I Agree &amp; Proceed</button></div>
+<div class="dcx" hidden><h3>Access Not Granted</h3><p>You need to accept the disclaimer to view this website. You may close this tab, or review the disclaimer again.</p><button class="fbb" id="dcr" type="button">Review Disclaimer</button></div>
+</div></div>
+<script>(function(){var d=document.getElementById('dc'),sp=document.getElementById('sp'),h=document.documentElement,y=document.getElementById('dcy'),ok=null;try{ok=sessionStorage.getItem('dcok')}catch(e){}
+if(ok){d.remove();sp.remove();return}
+h.style.overflow='hidden';
+for(var i=0;i<18;i++){var p=document.createElement('i');p.className='pt';var z=3+Math.random()*5;p.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+z+'px;height:'+z+'px;--d:'+(5+Math.random()*6)+'s;--x:'+(Math.random()*60-30)+'px;--y:'+(-20-Math.random()*50)+'px';sp.appendChild(p)}
+setTimeout(function(){sp.classList.add('out');d.hidden=false;y.focus({preventScroll:true});setTimeout(function(){sp.remove()},800)},2400);
+var S=d.querySelector('.dcs'),A=d.querySelector('.dca'),X=d.querySelector('.dcx');
+y.onclick=function(){try{sessionStorage.setItem('dcok','1')}catch(e){}h.style.overflow='';d.remove()};
+document.getElementById('dcn').onclick=function(){S.hidden=A.hidden=true;X.hidden=false;document.getElementById('dcr').focus()};
+document.getElementById('dcr').onclick=function(){S.hidden=A.hidden=false;X.hidden=true;y.focus()}})();</script>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-scale" viewBox="0 0 48 48"><path d="M24 6v34M12 42h24M8 14h32M8 14L2 28M8 14l6 14M2 28a6 6 0 0 0 12 0zM40 14l-6 14M40 14l6 14M34 28a6 6 0 0 0 12 0z"/></symbol><symbol id="i-cuff" viewBox="0 0 48 48"><circle cx="16" cy="31" r="9"/><circle cx="32" cy="17" r="9"/><path d="M22 25l4-4M16 28v6M32 14v6"/></symbol><symbol id="i-coin" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M15 14h18M15 20h18M17 14c11 0 11 13 0 13l11 10"/></symbol><symbol id="i-doc" viewBox="0 0 48 48"><path d="M9 4h21l9 9v31H9zM30 4v9h9M15 21h18M15 27h12"/><circle cx="29" cy="35" r="5"/><path d="M33 39l5 5"/></symbol><symbol id="i-court" viewBox="0 0 48 48"><path d="M3 18L24 5l21 13zM9 22v16M19 22v16M29 22v16M39 22v16M3 42h42M6 38h36M12 11h24"/></symbol><symbol id="i-gavel" viewBox="0 0 48 48"><path d="M24 6l12 12-7 7-12-12zM21 22L5 38l5 5 16-16M28 41h16"/></symbol><symbol id="i-cheque" viewBox="0 0 48 48"><rect x="3" y="11" width="42" height="26" rx="2"/><path d="M9 20h18M9 27h11M31 31h9M34 18h6"/></symbol></svg>
 
 <nav><div class="w"><a href="#top" class="logo">Neeraj Kumar Mishra</a>
@@ -178,7 +236,14 @@ footer h4{color:#fff;font-size:22px;margin:0 0 14px;font-family:'Cormorant Garam
 <div class="sld"><div class="q">Very good service, professional advocate. Legal knowledge and expertise, with clear guidance and timely action.</div><div class="who"><div class="av">A</div><div><b>Atul Mishra</b><small>Google review</small></div></div></div>
 <div class="sld"><div class="q">Very good advocate in Chandigarh and a top criminal advocates team.</div><div class="who"><div class="av">R</div><div><b>Rahul Mishra</b><small>Google review</small></div></div></div>
 <div class="sld"><div class="q">Very supportive and knowledgeable. I highly recommend him for any legal concern.</div><div class="who"><div class="av">S</div><div><b>Shyamjee Ojha</b><small>Google review</small></div></div></div>
-</div></div><div class="dots" id="dt"></div></div></section>
+</div></div><div class="dots" id="dt"></div><div class="fb" id="feedback"><h3>Share Your Feedback</h3><p>Worked with us? Tell us about your experience. Feedback is published after review by our team.</p>
+<div class="fbg"><div class="fbl" id="fbl" aria-live="polite"><div class="fbe">Loading feedback…</div></div>
+<form class="fbf" id="fbf" novalidate>
+<div><label for="fn">Your Name</label><input type="text" id="fn" maxlength="60" autocomplete="name"></div>
+<div><label id="rl">Rating</label><div class="stars" id="fs" role="radiogroup" aria-labelledby="rl"></div></div>
+<div><label for="fm">Your Feedback</label><textarea id="fm" rows="5" maxlength="600"></textarea></div>
+<input class="hp" type="text" id="fh" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="fbb" id="fbs" type="submit">Submit Feedback</button><div class="fbm" id="fx" role="status"></div></form></div></div></div></section>
 
 <section class="res" id="contact"><div class="w two">
 <div class="up"><h2>Speak To The Chamber</h2><p style="color:#b9b9c0">Describe your situation, bring whatever papers you have, and ask questions freely. Urgent matters are welcome at any hour.</p>
@@ -216,4 +281,32 @@ for(var k=0;k<N;k++){(function(k){var b=document.createElement('button');b.setAt
 setInterval(function(){go(i+1)},4500);go(0);
 document.getElementById('fm').onsubmit=function(e){e.preventDefault();var m='Hello, I am '+n.value+' ('+p.value+'). Matter: '+a.value+'. '+t.value;open('https://wa.me/919814272704?text='+encodeURIComponent(m),'_blank')};
 var mb=document.getElementById('mb'),ml=document.getElementById('m');function cm(o){ml.classList.toggle('open',o);mb.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu')}mb.onclick=function(){cm(!ml.classList.contains('open'))};[].forEach.call(ml.querySelectorAll('a'),function(a){a.addEventListener('click',function(){cm(false)})});
-</script></body></html>
+</script><script type="module">
+const firebaseConfig={apiKey:"AIzaSyDJXAMgJlmhT75WfjRpRlL_zpYxuC9IcRw",authDomain:"advocate-neeraj.firebaseapp.com",projectId:"advocate-neeraj",storageBucket:"advocate-neeraj.firebasestorage.app",messagingSenderId:"209464203175",appId:"1:209464203175:web:ac367069b3d023ec25c882"}; // <-- Firebase config yahan paste karo
+const $=id=>document.getElementById(id),list=$('fbl'),form=$('fbf'),msg=$('fx');
+let rating=0,db=null,F=null;
+const sw=$('fs');
+function paint(n){[...sw.children].forEach((b,j)=>{b.classList.toggle('on',j<n);b.setAttribute('aria-checked',String(j===n-1))})}
+for(let i=1;i<=5;i++){const b=document.createElement('button');b.type='button';b.textContent='★';b.setAttribute('role','radio');b.setAttribute('aria-label',i+(i>1?' stars':' star'));b.onclick=()=>{rating=i;paint(i)};sw.append(b)}
+function card(r){const c=document.createElement('div');c.className='fbc';const s=document.createElement('div');s.className='s5';s.textContent='★'.repeat(r.rating)+'☆'.repeat(5-r.rating);const p=document.createElement('p');p.textContent=r.message;const w=document.createElement('div');const b=document.createElement('b');b.textContent=r.name;const sm=document.createElement('small');let d='';try{d=r.createdAt.toDate().toLocaleDateString('en-IN',{month:'short',year:'numeric'})}catch(e){}sm.textContent=d?'  ·  '+d:'';w.append(b,sm);c.append(s,p,w);return c}
+function render(items){list.replaceChildren();if(!items.length){const e=document.createElement('div');e.className='fbe';e.textContent='No feedback published yet. Be the first to share your experience.';list.append(e);return}items.forEach(r=>list.append(card(r)))}
+function say(t,ok){msg.textContent=t;msg.className='fbm '+(ok?'ok':'er')}
+if(firebaseConfig.projectId){try{
+ const[{initializeApp},fs]=await Promise.all([import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js'),import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js')]);
+ F=fs;db=F.getFirestore(initializeApp(firebaseConfig));
+ const snap=await F.getDocs(F.query(F.collection(db,'reviews'),F.where('approved','==',true),F.limit(50)));
+ const items=snap.docs.map(d=>d.data()).filter(r=>r.rating>=1&&r.rating<=5&&r.name&&r.message);
+ items.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));render(items);
+}catch(e){console.error(e);render([])}}else render([]);
+form.onsubmit=async e=>{e.preventDefault();if($('fh').value)return;
+ const name=$('fn').value.trim(),text=$('fm').value.trim();
+ if(name.length<2||!rating||text.length<10){say('Please enter your name, choose a rating and write at least 10 characters.');return}
+ if(!db){say('Feedback system is not connected yet. Please try again later.');return}
+ try{if(Date.now()-(+localStorage.getItem('fbt')||0)<6e5){say('Please wait a few minutes before sending another feedback.');return}}catch(e){}
+ const btn=$('fbs');btn.disabled=true;
+ try{await F.addDoc(F.collection(db,'reviews'),{name,rating,message:text,approved:false,createdAt:F.serverTimestamp()});
+  say('Thank you! Your feedback has been received and will appear after review.',true);form.reset();rating=0;paint(0);try{localStorage.setItem('fbt',Date.now())}catch(e){}
+ }catch(err){console.error(err);say('Could not send feedback right now. Please try again later.')}
+ btn.disabled=false};
+</script>
+</body></html>
