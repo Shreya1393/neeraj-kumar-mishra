@@ -284,17 +284,20 @@ var mb=document.getElementById('mb'),ml=document.getElementById('m');function cm
 </script><script type="module">
 const firebaseConfig={apiKey:"AIzaSyDJXAMgJlmhT75WfjRpRlL_zpYxuC9IcRw",authDomain:"advocate-neeraj.firebaseapp.com",projectId:"advocate-neeraj",storageBucket:"advocate-neeraj.firebasestorage.app",messagingSenderId:"209464203175",appId:"1:209464203175:web:ac367069b3d023ec25c882"}; // <-- Firebase config yahan paste karo
 const $=id=>document.getElementById(id),list=$('fbl'),form=$('fbf'),msg=$('fx');
-let rating=0,db=null,F=null;
+let rating=0,db=null,F=null,shown=6;
 const sw=$('fs');
 function paint(n){[...sw.children].forEach((b,j)=>{b.classList.toggle('on',j<n);b.setAttribute('aria-checked',String(j===n-1))})}
 for(let i=1;i<=5;i++){const b=document.createElement('button');b.type='button';b.textContent='★';b.setAttribute('role','radio');b.setAttribute('aria-label',i+(i>1?' stars':' star'));b.onclick=()=>{rating=i;paint(i)};sw.append(b)}
 function card(r){const c=document.createElement('div');c.className='fbc';const s=document.createElement('div');s.className='s5';s.textContent='★'.repeat(r.rating)+'☆'.repeat(5-r.rating);const p=document.createElement('p');p.textContent=r.message;const w=document.createElement('div');const b=document.createElement('b');b.textContent=r.name;const sm=document.createElement('small');let d='';try{d=r.createdAt.toDate().toLocaleDateString('en-IN',{month:'short',year:'numeric'})}catch(e){}sm.textContent=d?'  ·  '+d:'';w.append(b,sm);c.append(s,p,w);return c}
-function render(items){list.replaceChildren();if(!items.length){const e=document.createElement('div');e.className='fbe';e.textContent='No feedback published yet. Be the first to share your experience.';list.append(e);return}items.forEach(r=>list.append(card(r)))}
+function render(items){const top=list.scrollTop;list.replaceChildren();if(!items.length){const e=document.createElement('div');e.className='fbe';e.textContent='No feedback published yet. Be the first to share your experience.';list.append(e);return}
+ const n=Math.min(shown,items.length);items.slice(0,n).forEach(r=>list.append(card(r)));
+ if(n<items.length){const b=document.createElement('button');b.type='button';b.className='fbb';b.textContent='Load more reviews ('+(items.length-n)+' more)';b.onclick=()=>{shown+=6;render(items)};list.append(b)}
+ list.scrollTop=top}
 function say(t,ok){msg.textContent=t;msg.className='fbm '+(ok?'ok':'er')}
 if(firebaseConfig.projectId){try{
  const[{initializeApp},fs]=await Promise.all([import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js'),import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js')]);
  F=fs;db=F.getFirestore(initializeApp(firebaseConfig));
- const snap=await F.getDocs(F.query(F.collection(db,'reviews'),F.where('approved','==',true),F.limit(50)));
+ const snap=await F.getDocs(F.query(F.collection(db,'reviews'),F.where('approved','==',true),F.limit(1000)));
  const items=snap.docs.map(d=>d.data()).filter(r=>r.rating>=1&&r.rating<=5&&r.name&&r.message);
  items.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));render(items);
  if(items.length){const G=42,GR=5,N=items.length,sum=items.reduce((t,r)=>t+r.rating,0),total=G+N,avg=((GR*G+sum)/total).toFixed(1);
